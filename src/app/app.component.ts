@@ -6,16 +6,15 @@ import { decrement, increment, reset } from './num.actions';
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
-  styleUrls: [ './app.component.css' ]
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent  {
+export class AppComponent {
   name = 'Angular ' + VERSION.major;
 
   count$: Observable<number>;
 
   constructor(private store: Store<{ num: number }>) {
     this.count$ = store.select('num');
-    console.log(this.count$);
   }
 
   increment() {
