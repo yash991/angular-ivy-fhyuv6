@@ -3,10 +3,12 @@
   Start editing to see some magic happen :)
 </p>
 
-<button id="increment" (click)="increment()">Increment</button>
-
-<div>Current Count: {{ count$ | async }}</div>
-
-<button id="decrement" (click)="decrement()">Decrement</button>
-
-<button id="reset" (click)="reset()">Reset Counter</button>
+<div class="col-md-6">
+  <button class="btn btn-primary" id="increment" (click)="increment()">Increment</button>
+  
+  <div style="margin-bottom:2em">Current Count: {{ count$ | async }}</div>
+  
+  <button class="btn btn-secondary" id="decrement" (click)="decrement()">Decrement</button>
+  
+  <button style="margin-left:1em" class="btn btn-secondary" id="reset" (click)="reset()">Reset Counter</button>
+</div>
